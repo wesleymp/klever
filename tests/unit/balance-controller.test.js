@@ -2,12 +2,6 @@ const sinon = require('sinon');
 const service = require('../../src/services');
 const controllers = require('../../src/controllers');
 
-jest.mock('../../src/services');
-service.balance.mockImplementation(() => Promise.resolve({
-  confirmed: '339376312',
-  unconfirmed: '68509740',
-}));
-
 describe('Controller balance', () => {
   const req = {};
   const res = {};
