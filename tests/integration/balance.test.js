@@ -1,6 +1,5 @@
 const request = require('supertest');
 const sinon = require('sinon');
-const services = require('../../src/services');
 const models = require('../../src/models');
 const utxo = require('../memory-requests/utxo');
 
