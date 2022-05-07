@@ -1,9 +1,9 @@
-const axios = require('../models/axios');
+const models = require('../models');
 const balanceMap = require('./helpers/balanceMap');
 
 const balance = async (address) => {
-  const { data } = await axios.get(`/utxo/${address}`);
-  const newBalance = balanceMap(data);
+  const balanceData = await models.balance(address);
+  const newBalance = balanceMap(balanceData);
   return newBalance;
 };
 
