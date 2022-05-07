@@ -7,6 +7,7 @@
     "test": "jest tests --runInBand --forceExit",
     "test:unit": "jest tests/unit --runInBand --forceExit",
     "test:integration": "jest tests/unit --runInBand --forceExit",
+    "test:coverage": "jest tests --coverage --runInBand --forceExit",
     "dev": "nodemon src/main/server.js"
   },
   "keywords": [],
