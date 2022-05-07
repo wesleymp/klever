@@ -15,7 +15,7 @@ describe('Services balance', () => {
       confirmed: '5698336',
       unconfirmed: '1526092',
     };
-    sinon.stub(models, 'balance').resolves(utxo);
+    sinon.stub(models, 'utxo').resolves(utxo);
     const balanceData = await services.balance(address);
     expect(balanceData).toMatchObject(expectBalance);
   });

@@ -1,5 +1,7 @@
-const balance = require('./balance');
+const utxo = require('./utxo');
+const details = require('./details');
 
 module.exports = {
-  balance,
+  utxo,
+  details,
 };
