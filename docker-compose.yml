@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  klever:
+    build: .
+    command: npm start
+    ports:
+      - 3001:3001
+    volumes:
+      - .:/usr/src/app
+      - node_modules:/usr/src/app/node_modules
+
+volumes:
+  node_modules:
