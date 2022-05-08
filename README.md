@@ -161,7 +161,7 @@ Transaction [GET]: `/tx/3654d26660dcc05d4cfb25a1641a1e61f06dfeb38ee2279bdb049d01
 _Resposta:_
 
 ```json
-
+{
   "addresses": [
     {
       "address": "36iYTpBFVZPbcyUs8pj3BtutZXzN6HPNA6",
