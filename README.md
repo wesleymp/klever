@@ -101,6 +101,18 @@ Transaction Details
 
 # Klever API Endpoints
 
+Health [GET]: `/health`
+
+_Resposta:_
+
+```json
+{
+  "uptime": 11.3628275,
+  "message": "OK",
+  "date": "2022-05-09T05:28:04.821Z"
+}
+```
+
 Details [GET]: `/details/bc1qyzxdu4px4jy8gwhcj82zpv7qzhvc0fvumgnh0r`
 
 _Resposta:_
