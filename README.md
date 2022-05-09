@@ -101,6 +101,8 @@ Transaction Details
 
 # Klever API Endpoints
 
+.env: `BASE_URL=http://localhost:3001`
+
 Health [GET]: `/health`
 
 _Resposta:_
