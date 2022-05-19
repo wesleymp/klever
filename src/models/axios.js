@@ -6,8 +6,10 @@ const agent = new https.Agent({
 });
 
 const axios = create({
-  baseURL: 'https://blockbook-bitcoin.tronwallet.me/api/v2',
+  baseURL: 'https://bitcoin.blockbook.chains.klever.io/api/v2',
   httpsAgent: agent,
 });
+
+axios.defaults.timeout = 2000;
 
 module.exports = axios;
