@@ -5,7 +5,7 @@ const utxo = require('../memory-requests/utxo');
 
 const app = require('../../src/main/app');
 
-describe('Rota [GET] /send', () => {
+describe('Rota [POST] /send', () => {
   afterEach(() => {
     sinon.restore();
   });
@@ -13,7 +13,10 @@ describe('Rota [GET] /send', () => {
   it('should return a status 200 when accessing rote /send', (done) => {
     sinon.stub(models, 'utxo').resolves(utxo);
     request(app)
-      .get('/send')
+      .post('/send')
+      .send({
+        address: 'bc1qyzxdu4px4jy8gwhcj82zpv7qzhvc0fvumgnh0r',
+      })
       .expect(200)
       .end(done);
   });
@@ -41,7 +44,10 @@ describe('Rota [GET] /send', () => {
     };
     sinon.stub(models, 'utxo').resolves(utxo);
     request(app)
-      .get('/send')
+      .post('/send')
+      .send({
+        address: 'bc1qyzxdu4px4jy8gwhcj82zpv7qzhvc0fvumgnh0r',
+      })
       .then((res) => {
         expect(res.body).toMatchObject(expectSend);
         return done();
