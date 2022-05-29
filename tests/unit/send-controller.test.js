@@ -3,7 +3,11 @@ const service = require('../../src/services');
 const controllers = require('../../src/controllers');
 
 describe('Controller send', () => {
-  const req = {};
+  const req = {
+    body: {
+      address: 'bc1qyzxdu4px4jy8gwhcj82zpv7qzhvc0fvumgnh0r',
+    },
+  };
   const res = {};
   const next = sinon.stub();
 

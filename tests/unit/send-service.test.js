@@ -4,6 +4,8 @@ const models = require('../../src/models');
 const utxo = require('../memory-requests/utxo');
 
 describe('Services send', () => {
+  const address = 'bc1qyzxdu4px4jy8gwhcj82zpv7qzhvc0fvumgnh0r';
+
   afterEach(() => {
     sinon.restore();
   });
@@ -30,7 +32,7 @@ describe('Services send', () => {
       ],
     };
     sinon.stub(models, 'utxo').resolves(utxo);
-    const sendData = await services.send();
+    const sendData = await services.send(address);
     expect(sendData).toMatchObject(expectSend);
   });
 });
