@@ -146,7 +146,15 @@ _Resposta:_
 }
 ```
 
-Send [GET]: `/send`
+Send [POST]: `/send`
+
+_Requisição:_
+
+```json
+{
+  "address": "bc1qyzxdu4px4jy8gwhcj82zpv7qzhvc0fvumgnh0r"
+}
+```
 
 _Resposta:_
 
